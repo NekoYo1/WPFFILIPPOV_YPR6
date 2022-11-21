@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPFFILIPPOV_YPR6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFFILIPPOV_YPR6"
+        mc:Ignorable="d"
+       Title="MainWindow" Height="450" Width="800" Background="#FFD0B296" MinHeight="450" MinWidth="800"  >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.75*"/>
+            <RowDefinition Height="0.75*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="3" Grid.Row="0"  Background="#FF545454"></TextBlock>
+        <TextBlock  FontSize="32" Grid.ColumnSpan="3" Padding="20" HorizontalAlignment="Center" Background="#FF545454">Auth</TextBlock>
+
+        <Label x:Name="Label1" Grid.Row="2" Grid.Column="1" Background="White" Content="Username"  Foreground="#FF9C9C9C" FontSize="18" Margin="5" />
+        <TextBox x:Name="Username" Grid.Row="2" Grid.Column="1"  VerticalContentAlignment="Center" FontSize="18" Foreground="Black" TextChanged="Username_TextChanged" Background="{x:Null}"  Margin="5"/>
+
+        <Label x:Name="Label2" Grid.Row="3"  Grid.Column="1" Content="Password"  Foreground="#FF9C9C9C" VerticalContentAlignment="Center" FontSize="18"  Background="White"  Margin="5" />
+        <TextBox x:Name="Password" Grid.Row="3" Grid.Column="1" Foreground="Black" VerticalContentAlignment="Center" FontSize="18" Background="{x:Null}" TextChanged="Password_TextChanged" Margin="5" />
+        <Button Grid.Row="4"  Grid.Column="1" Width="90" Height="30" Content="Log in" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Button_Click" Margin="5"  />
+
+        <StackPanel Grid.Row="4" Grid.Column="1"  Orientation="Horizontal"  HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Label Content="Remember me" FontSize="18" />
+            <CheckBox x:Name="RM"  Margin="12" />
+        </StackPanel>
+
+        <Frame x:Name="Bruh1" Grid.ColumnSpan="3" Grid.RowSpan="5" Source="page3.xaml" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
